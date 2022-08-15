@@ -12,7 +12,7 @@ public class App {
         boolean exit = false;
         while(!exit){
             System.out.println("Olá seja bem vindo ao sistema de tarefas!");
-            System.out.println("\nDigite a opção desejada: \n1 - Adicionar uma tarefa \n2 - Deletar uma tarefa \n3 - Listar tarefas \n4 - Listar tarefas por categoria \n5 - Listar tarefas por status \n6 - Listar tarefas por prioridade \n7 - Sair");
+            System.out.println("\nDigite a opção desejada: \n1 - Adicionar uma tarefa \n2 - Deletar uma tarefa \n3 - Listar tarefas \n4 - Listar tarefas por categoria \n5 - Listar tarefas por status \n6 - Listar tarefas por prioridade \n7 - Atualizar tarefa \n8 - Sair");
             int option = sc.nextInt();
             switch(option){
                 case 1:
@@ -34,6 +34,9 @@ public class App {
                     Methods.list_by_priority();
                     break;
                 case 7:
+                    Methods.update_task();
+                    break;
+                case 8:
                     exit = true;
                     break;
                 default:

@@ -41,6 +41,33 @@ public class Methods {
                 }
 
 
+        //Atualizando tarefas
+            public static void update_task() {
+                System.out.println("Digite o nome da tarefa que deseja atualizar: ");
+                String name = sc.nextLine();
+                for(Task task : tasks) {
+                    if(task.getName().equals(name)) {
+                        System.out.println("Digite a nova descrição da tarefa: ");
+                        String description = sc.nextLine();
+                        System.out.println("Digite a nova data de vencimento da tarefa: ");
+                        String dueDate = sc.nextLine();
+                        System.out.println("Digite a nova categoria da tarefa: ");
+                        String category = sc.nextLine();
+                        System.out.println("Digite o novo status da tarefa: ");
+                        String status = sc.nextLine();
+                        System.out.println("Digite a nova prioridade da tarefa: ");
+                        int priority = Integer.parseInt(sc.nextLine());
+                        task.setDescription(description);
+                        task.setDueDate(dueDate);
+                        task.setCategory(category);
+                        task.setStatus(status);
+                        task.setPriority(priority);
+                        System.out.println("Tarefa atualizada com sucesso!");
+                    }
+                }
+                }
+
+
         //Listando as tarefas
     public static void list_tasks() {
         for (Task task : tasks) {
