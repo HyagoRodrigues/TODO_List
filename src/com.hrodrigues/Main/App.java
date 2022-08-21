@@ -1,4 +1,4 @@
-package Main;
+package com.hrodrigues.Main;
 
 import Methods.Methods;
 import java.util.*;

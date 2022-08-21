@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>TO Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>TO Do List</h1>
+</header>
+<main>
+    <button type="button" class="button btn-task"  id="new-task">Nova Tarefa</button>
+    <table id="tableTask" class="tasks">
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Data Final</th>
+            <th>Categoria</th>
+            <th>Prioridade</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <header class="modal-header">
+                <span class="close" id="close">&times;</span>
+                <h2>Nova Tarefa</h2>
+            </header>
+            <form id="form" class="modal-form">
+                <input type="text" id="task-name" data-index="new" class="modal-input" placeholder="Nome da Tarefa" required>
+                <input type="text" id="task-description" data-index="new" class="modal-input" placeholder="Descrição da Tarefa" required>
+                <input type="date" id="task-date" data-index="new" class="modal-input" placeholder="Data Final" required>
+                <input type="text" id="task-category" data-index="new" class="modal-input" placeholder="Categoria" required>
+                <select id="task-priority" data-index="new" class="modal-input" required>
+                    <option value="">PRIORIDADE</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <select id="task-status" data-index="new" class="modal-input" required>
+                    <option value="">STATUS</option>
+                    <option value="do">DO</option>
+                    <option value="doing">DOING</option>
+                    <option value="done">DONE</option>
+                </select>
+                <footer>
+                    <button type="submit" id="save" class="button btn-modal-green">Salvar</button>
+                    <button type="button" id="cancelar" class="button btn-modal-red" id="cancel">Cancelar</button>
+                </footer>
+            </form>
+        </div>
+
+    </div>
+</main>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
