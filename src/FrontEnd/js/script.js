@@ -139,6 +139,42 @@ const editDelete = (event) => {
     }
 }
 
+//Filtrar por DO
+function filter_by_do(){
+    clearTable()
+    const tasks = readTasks()
+    const clone = [...tasks]
+    const filter = clone.filter(e => e.status == "DO")
+    localStorage.setItem('do', JSON.stringify(filter));
+    filter.forEach(createRow);
+}
+//Filtrar por DOING
+function filter_by_doing(){
+    clearTable()
+    const tasks = readTasks()
+    const clone = [...tasks]
+    const filter = clone.filter(e => e.status == "DOING")
+    localStorage.setItem('doing', JSON.stringify(filter));
+    filter.forEach(createRow);
+}
+//Filtrar por DONE
+function filter_by_done(){
+    clearTable()
+    const tasks = readTasks()
+    const clone = [...tasks]
+    const filter = clone.filter(e => e.status == "DONE")
+    localStorage.setItem('done', JSON.stringify(filter));
+    filter.forEach(createRow);
+}
+
+
+function all_tasks(){
+    const tasks = readTasks()
+    console.log(tasks)
+    clearTable()
+    updateTable()
+}
+
 updateTable()
 
 document.getElementById('new-task')
@@ -155,3 +191,19 @@ document.querySelector('#tableTask>tbody')
 
 document.getElementById('cancelar')
 .addEventListener('click', closeModal)
+
+
+//FILTROS
+
+
+document.getElementById('all-tasks')
+    .addEventListener('click', all_tasks)
+
+document.getElementById('do-task')
+.addEventListener('click', filter_by_do)
+
+document.getElementById('doing-task')
+    .addEventListener('click', filter_by_doing)
+
+document.getElementById('done-task')
+    .addEventListener('click', filter_by_done)
