@@ -2,7 +2,7 @@ const openModal = () => document.getElementById('modal')
     .classList.add('active');
 
 const closeModal = () => {
-    clearFields()
+
     document.getElementById('modal').classList.remove('active');
 }
 
@@ -42,11 +42,6 @@ const validateFields = () => {
     return document.getElementById('form').reportValidity();
 }
 
-const clearFields = () => {
-    const fields = document.querySelectorAll('input');
-    fields.forEach(field => field.value = '');
-    document.getElementById('task-name').dataset.index = 'new';
-}
 
 
 const saveTask = () => {
