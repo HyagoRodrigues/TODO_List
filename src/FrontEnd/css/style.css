@@ -186,6 +186,9 @@ main{
     background-color: #ffe149;
 }
 
+.btn-modal-gray{
+    background-color: #2b475e;
+}
 
 .main-btn{
     display: flex;
@@ -204,6 +207,7 @@ main{
     padding: 0px 5px 0px 5px;
     color: white;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
     transition: box-shadow .6s ease;
     border-radius: 5px;
