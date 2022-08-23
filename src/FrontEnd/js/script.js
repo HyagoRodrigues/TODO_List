@@ -2,7 +2,7 @@ const openModal = () => document.getElementById('modal')
     .classList.add('active');
 
 const closeModal = () => {
-    //clearFields()
+    clearFields()
     document.getElementById('modal').classList.remove('active');
 }
 
@@ -166,8 +166,7 @@ function filter_by_done(){
     localStorage.setItem('done', JSON.stringify(filter));
     filter.forEach(createRow);
 }
-
-
+//TODAS AS TAREFAS
 function all_tasks(){
     const tasks = readTasks()
     console.log(tasks)
