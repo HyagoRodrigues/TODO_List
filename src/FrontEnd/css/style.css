@@ -162,7 +162,7 @@ main{
     height: 40px;
     padding: 6px 12px;
     background-color: black;
-    color: white;
+    color: #ffffff;
     font-size: 1rem;
     cursor: pointer;
     transition: box-shadow .6s ease;
@@ -176,6 +176,7 @@ main{
 
 .btn-modal-green{
     background-color: #13CE66;
+
 }
 
 .btn-modal-red{
@@ -183,7 +184,7 @@ main{
 }
 
 .btn-modal-yellow{
-    background-color: #ffe149;
+    background-color: #eec71a;
 }
 
 .btn-modal-gray{

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>TO Do List</title>
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 <header>
@@ -24,12 +25,14 @@
     <table id="tableTask" class="tasks">
         <thead>
         <tr>
+            <th><input type="checkbox" class="header-checkbox" onclick="select_all()" id="checkbox-super" ></th>
             <th>NOME</th>
             <th>DESCRIÇÃO</th>
             <th>DATA FINAL</th>
             <th>CATEGORIA</th>
             <th>PRIORIDADE</th>
             <th>STATUS</th>
+            <th>AÇÕES</th>
         </tr>
         </thead>
         <tbody></tbody>
@@ -42,10 +45,12 @@
                 <h2>Nova Tarefa</h2>
             </header>
             <form id="form" class="modal-form">
+
                 <input type="text" id="task-name" data-index="new" class="modal-input" placeholder="Nome da Tarefa" required>
                 <input type="text" id="task-description" data-index="new" class="modal-input" placeholder="Descrição da Tarefa" required>
                 <input type="date" id="task-date" data-index="new" class="modal-input" placeholder="Data Final" required>
                 <input type="text" id="task-category" data-index="new" class="modal-input" placeholder="Categoria" required>
+
                 <select id="task-priority" data-index="new" class="modal-input" required>
                     <option value="">PRIORIDADE</option>
                     <option value="1">1</option>
@@ -68,6 +73,16 @@
         </div>
 
     </div>
+    <section>
+        <h1>TROCAR STATUS:</h1>
+        <select id="change-status" class="change-status">
+            <option value="" disabled selected >STATUS</option>
+            <option value="DO">DO</option>
+            <option value="DOING">DOING</option>
+            <option value="DONE">DONE</option>
+        </select>
+        <button type="button" id="change">TROCAR</button>
+    </section>
 </main>
 
 
