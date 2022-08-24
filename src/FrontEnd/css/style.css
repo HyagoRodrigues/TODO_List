@@ -33,25 +33,25 @@
     height: 40px;
     line-height: 40px;
     font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
 }
 
 .close{
     position: absolute;
     right: 0;
-    display: block;
     width: 40px;
     height: 40px;
     text-align: center;
     user-select: none;
-    padding: 0.5rem;
     cursor: pointer;
-    background-color: chartreuse;
+    background-color: #ff0000;
     font-size: 40px;
     color: white;
 }
 
 .close:hover{
-    background-color: #FF4949;
+    background-color: #911212;
     color: white;
 }
 
@@ -110,7 +110,7 @@ header{
 }
 
 header h1{
-    color: var(--cor-secundaria);
+    color: white;
     font-size: 2rem;
     text-transform: uppercase;
 }
@@ -133,16 +133,29 @@ main{
     text-align: left;
 }
 
-.records th{
-    height: 50px;
+.table-head{
+    border: 1px solid white;
+    font-family: arial;
+    line-height: 45px;
+    font-size: 14px ;
+    font-weight: bold ;
+    text-align: center;
     background-color: var(--cor-principal);
-    padding-left: 20px;
-    font-size: 1.2rem;
+    color: white;
 }
 
+
 .records td{
-    height: 50px;
-    padding-left: 20px;
+    font-family: arial !important;
+    font-size: 15px !important;
+    text-align: center !important;
+}
+
+tbody tr:nth-child(odd){
+    background-color: #E6E6E6 !important;
+}
+tbody tr:nth-child(even){
+    background-color: #ffffff !important;
 }
 
 .records th:last-child,
@@ -159,14 +172,14 @@ main{
 
 .button{
     border-style: none;
-    height: 40px;
-    padding: 6px 12px;
+    height: 30px;
+    padding: 4px 6px;
     background-color: black;
     color: #ffffff;
     font-size: 1rem;
     cursor: pointer;
     transition: box-shadow .6s ease;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 .button.btn-task{
@@ -204,13 +217,21 @@ main{
 
 .btn-status{
     border-style: none;
-    height: 30px;
+    height: 25px;
+    width: 60px;
     padding: 0px 5px 0px 5px;
     color: white;
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: bold;
     cursor: pointer;
     transition: box-shadow .6s ease;
     border-radius: 5px;
     margin-left: 20px;
+}
+
+.change-status {
+    margin: 8px;
+    height: 30px;
+    width: 45%;
+
 }

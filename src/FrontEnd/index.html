@@ -15,7 +15,7 @@
         <button type="button" class="button btn-task"  id="new-task">Nova Tarefa</button>
 
     <div class="main-btn">
-        <h3>Filtrar Por: </h3>
+        <h3>FILTRAR POR: </h3>
         <button type="button" class=" btn-status btn-modal-gray"  id="all-tasks">TODAS</button>
         <button type="button" class=" btn-status btn-modal-red"  id="do-task">DO</button>
         <button type="button" class=" btn-status btn-modal-yellow"  id="doing-task">DOING</button>
@@ -23,7 +23,7 @@
     </div>
 
     <table id="tableTask" class="tasks">
-        <thead>
+        <thead class="table-head">
         <tr>
             <th><input type="checkbox" class="header-checkbox" onclick="select_all()" id="checkbox-super" ></th>
             <th>NOME</th>
@@ -35,7 +35,7 @@
             <th>AÇÕES</th>
         </tr>
         </thead>
-        <tbody></tbody>
+        <tbody class="records" ></tbody>
     </table>
 
     <div class="modal" id="modal">
@@ -73,15 +73,15 @@
         </div>
 
     </div>
-    <section>
-        <h1>TROCAR STATUS:</h1>
+    <section >
+        <h3>TROCAR STATUS:</h3>
         <select id="change-status" class="change-status">
             <option value="" disabled selected >STATUS</option>
             <option value="DO">DO</option>
             <option value="DOING">DOING</option>
             <option value="DONE">DONE</option>
         </select>
-        <button type="button" id="change">TROCAR</button>
+        <button type="button" class="button btn-task" id="change">Trocar</button>
     </section>
 </main>
 
