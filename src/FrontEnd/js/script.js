@@ -44,7 +44,7 @@ const validateFields = () => {
 
 
 const saveTask = () => {
-    debugger
+
     if (validateFields()) {
         const task = {
             id: Math.floor(Math.random() * 65272),
