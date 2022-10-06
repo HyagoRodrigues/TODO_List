@@ -10,5 +10,5 @@ Status.
 Quando uma nova tarefa é adicionada ela respeita a hierarquia do nível de prioridade da tarefa.
 
 
-##Arquivo Principal - App.java 
-  -- arquivo se encontra dentro da pasta Main.
+## Como executar o arquivo.
+no terminal digite ./gradlew run
