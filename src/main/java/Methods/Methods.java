@@ -1,48 +1,46 @@
 package Methods;
 
-import Object.Task;
+import Objects.Task;
 
 import java.util.*;
 
-
 public class Methods {
-        static List<Task> tasks = new ArrayList<>();
-        static Scanner sc = new Scanner(System.in);
+    static List<Task> tasks = new ArrayList<>();
+    static Scanner sc = new Scanner(System.in);
 
-        public Methods() {
-            this.tasks = new ArrayList<>();
-        }
+    public Methods() {
+        this.tasks = new ArrayList<>();
+    }
 
-        //Adicionando tarefas
-            public static void add_task() {
-                System.out.println("Digite o nome da tarefa: ");
-                String name = sc.nextLine();
-                System.out.println("Digite a descrição da tarefa: ");
-                String description = sc.nextLine();
-                System.out.println("Digite a data de vencimento da tarefa: ");
-                String dueDate = sc.nextLine();
-                System.out.println("Digite a categoria da tarefa: ");
-                String category = sc.nextLine();
-                System.out.println("Digite o status da tarefa: ");
-                String status = sc.nextLine();
-                System.out.println("Digite a prioridade da tarefa: ");
-                int priority = Integer.parseInt(sc.nextLine());
-                    Task task = new Task(name, description, dueDate, priority, category, status);
-                    tasks.add(task);
-                    sort_by_priority();
-                    System.out.println("Tarefa adicionada com sucesso!");
-                }
+    public static void add_task() {
+        System.out.println("Digite o nome da tarefa: ");
+        String name = sc.nextLine();
+        System.out.println("Digite a descrição da tarefa: ");
+        String description = sc.nextLine();
+        System.out.println("Digite a data de vencimento da tarefa: ");
+        String dueDate = sc.nextLine();
+        System.out.println("Digite a categoria da tarefa: ");
+        String category = sc.nextLine();
+        System.out.println("Digite o status da tarefa: ");
+        String status = sc.nextLine();
+        System.out.println("Digite a prioridade da tarefa: ");
+        int priority = Integer.parseInt(sc.nextLine());
+        Task task = new Task(name, description, dueDate, priority, category, status);
+        tasks.add(task);
+        sort_by_priority();
+        System.out.println("Tarefa adicionada com sucesso!");
+    }
 
-        //Ordenando tarefas pelo nível de prioridade
-            public static void sort_by_priority() {
-                tasks.sort((task1, task2) -> {
-                    return Integer.compare(task1.getPriority(), task2.getPriority());
-                });
-                }
-
+    //Ordenando tarefas pelo nível de prioridade
+    public static void sort_by_priority() {
+        tasks.sort((task1, task2) -> {
+            return Integer.compare(task1.getPriority(), task2.getPriority());
+        });
+    }
 
 
-        //Listando as tarefas
+
+    //Listando as tarefas
     public static void list_tasks() {
         for (Task task : tasks) {
             System.out.println("Nome da Tarefa: " + task.getName());
@@ -148,6 +146,5 @@ public class Methods {
             }
         }
     }
-
 
 }

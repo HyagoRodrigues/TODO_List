@@ -1,7 +1,6 @@
-package Object;
+package Objects;
 
 public class Task {
-
     private String name;
     private String description;
     private String dueDate;
